@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+    var loginCadastrado = "123";
+    var senhaCadastrada = "123";
+
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+    var limite = 3;
+
+    if ( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+        alert("Bem-vindo ao sistema " + loginInformado)        
+    }
+    else {
+        while (limite <= 3) {
+            alert("Dados incorretos")    
+            loginInformado = prompt("Informe seu login");
+            senhaInformada = prompt("Informe sua senha");
+            limite = limite + 1
+
+            if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ){
+                alert("Bem-vindo ao sistema " + loginInformado)
+                limite = limite + 3
+            }
+            else {
+                alert("Dados incorretos")
+                loginInformado = prompt("Informe seu login");
+                senhaInformada = prompt("Informe sua senha");  
+                limite = limite + 1
+
+                if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada){
+                    alert("Bem-vindo ao sistema " + loginInformado)
+                    limite = limite + 2
+                }
+                else {
+                    alert("Dados incorretos")
+                    loginInformado = prompt("Informe seu login");
+                    senhaInformada = prompt("Informe sua senha");  
+                    limite = limite + 1
+
+                    if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada){
+                    alert("Bem-vindo ao sistema " + loginInformado)
+                    limite = limite + 2
+                    }
+                    else{
+                        alert("Dados incorretos");
+                        alert("Fim de tentativas");
+                    }
+                }   
+            }
+        } 
+    }
+                
+    
+</script>

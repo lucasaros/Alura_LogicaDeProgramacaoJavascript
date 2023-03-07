@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>meu segredo</button>
+
+<script>
+
+    var segredo = 5;
+    var input = document.querySelector("input");
+    var button = document.querySelector("button");
+
+    input.focus();
+
+    function verifica(){
+        if(input.value == segredo){
+        alert("Você ACERTOU");
+        }
+        else{
+        alert("Você ERROU")
+
+        //o valor do botão será NADA 
+        input.value = "";
+
+        //o botão ficará em destaque(focado)
+        input.focus();
+        }
+    }
+
+    //button.onclick = um clique
+    button.onclick = verifica;
+    //o button.onclick recebe a função verifica() sem os parênteses.
+    //porque assim a função verifica() só será executada quando apertarmos o botão.   
+
+</script>
